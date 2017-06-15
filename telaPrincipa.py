@@ -2,7 +2,6 @@ import pygame
 import random
 
 pygame.init()
-
 BLACK = [0,0,0]
 WHITE = [255,255,255]
 # Defina a altura e a largura da tela
@@ -10,30 +9,31 @@ tamanho = [400,400]
 
 screen = pygame.display.set_mode(tamanho)
 pygame.display.set_caption("Tela Principal")
-backgroun_image = pygame.image.load("estrela.png").convert()
-backgroun_image = pygame.image.load("ship.png").convert()
+#cria duas imagens
+backgroun_image1 = pygame.image.load("estrela.png").convert()
+backgroun_image2 = pygame.image.load("ship.png").convert()
 
 # Criar uma matriz vazia
 matriz = []
 
 # Loop 50 vezes e adicione
-#  um floco de neve em uma posição aleatória x, y
 for i in range(50):
     x = random.randrange(0,600)
     y = random.randrange(0,600)
     matriz.append([x,y])
 clock = pygame.time.Clock()
 
-# loop até o usuário clicar no botão Fechar.
 pressionar = False
 while not pressionar:
     for event in pygame.event.get():#o usuario pressionou algo
-        if event.type == pygame.QUIT:# Se o usuário clicou em fechar
+        if event.type == pygame.QUIT:
             pressionar = True  # Indique que estamos preparados para que saia deste loop
 
     # Defina o fundo da tela
     screen.fill(BLACK)
-    screen.blit(backgroun_image, [0, 0])
+
+    screen.blit(backgroun_image1, [0, 0])
+    screen.blit(backgroun_image2, [0, 0])
 
 
     # Processe cada floco de neve na lista
@@ -51,7 +51,7 @@ while not pressionar:
             y = random.randrange(-50, -10)
             matriz[i][1] = y
 
-            # Dê uma nova posição x
+
             x = random.randrange(0, 400)
             matriz[i][0] = x
 
