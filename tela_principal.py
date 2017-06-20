@@ -17,7 +17,7 @@ from pygame.sprite import GroupSingle, spritecollideany, groupcollide, Group
 from sprites import Ship, AsteroidGroup, ShipGroup, ScoreSprite, ExplodingAsteroidsGroup
 #from db import DB
 
-__author__ = 'julio'
+
 
 
 class UserInput:
