@@ -6,6 +6,9 @@
 # Matheus de Oliveira Marques               1515310514
 # Reinaldo da Silva Varas                   1715310054
 # Silas Castro de Mendonça                  1715310066
+# Lucas Gabriel Silveira Duarte             1715310053
+# Gabriel de Queiroz Sousa                  1715310044
+# Rodrigo Duarte de Souza                   1115140049
 
 
 Asteroids
